@@ -1,0 +1,22 @@
+services:
+  python-lint-api:
+    build:
+      context: ./python_codequality_api
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: python-lint-api
+  java-lint-api:
+    build:
+      context: ./java_codequality_api
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    container_name: java-lint-api
+  c-lint-api:
+    build:
+      context: ./c_codequality_api
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    container_name: c-lint-api
