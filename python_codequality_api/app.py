@@ -39,7 +39,7 @@ def analyze_code():
         return (
             jsonify(
                 {
-                    "results": [{"line":message.line , "descipriotion": message.msg} for message in reporter.messages],
+                    "results": [{"line":message.line , "description": message.msg} for message in reporter.messages],
                     "message": "Code analyzed successfully",
                 }
             ),
